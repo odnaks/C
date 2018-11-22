@@ -6,7 +6,7 @@
 /*   By: drestles <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/21 03:12:51 by drestles          #+#    #+#             */
-/*   Updated: 2018/11/21 20:49:34 by drestles         ###   ########.fr       */
+/*   Updated: 2018/11/22 05:01:13 by drestles         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strstr(const char *a, const char *b)
 
 	n = ft_strlen(b);
 	i = 0;
+	if (*b == '\0')
+		return ((char*)a);
 	while (a[i])
 	{
 		j = 0;
