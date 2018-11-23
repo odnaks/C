@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: drestles <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/21 03:12:51 by drestles          #+#    #+#             */
-/*   Updated: 2018/11/22 06:53:35 by drestles         ###   ########.fr       */
+/*   Created: 2018/11/22 21:40:28 by drestles          #+#    #+#             */
+/*   Updated: 2018/11/22 22:35:47 by drestles         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
 	char	*a;
-	size_t	n;
-	size_t	i;
 
-	n = ft_strlen(s1);
-	a = (char *)malloc(n * sizeof(*s1) + 1);
-	if (a)
+	if (s)
 	{
-		i = 0;
-		while (i < n)
+		while (start > 0)
 		{
-			a[i] = s1[i];
-			i++;
+			s++;
+			start--;
 		}
-		a[i] = '\0';
+		a = ft_strnew(len);
+		if (a)
+		{
+			a = ft_strncpy(a, s, len);
+			return (a);
+		}
 	}
-	return (a);
+	return (NULL);
 }

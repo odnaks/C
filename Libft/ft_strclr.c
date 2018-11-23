@@ -1,34 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strclr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: drestles <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/21 03:12:51 by drestles          #+#    #+#             */
-/*   Updated: 2018/11/22 06:53:35 by drestles         ###   ########.fr       */
+/*   Created: 2018/11/22 19:19:43 by drestles          #+#    #+#             */
+/*   Updated: 2018/11/22 19:57:54 by drestles         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+void	ft_strclr(char *s)
 {
-	char	*a;
 	size_t	n;
-	size_t	i;
 
-	n = ft_strlen(s1);
-	a = (char *)malloc(n * sizeof(*s1) + 1);
-	if (a)
+	if (s)
 	{
-		i = 0;
-		while (i < n)
-		{
-			a[i] = s1[i];
-			i++;
-		}
-		a[i] = '\0';
+		n = ft_strlen(s);
+		ft_memset(s, '\0', n);
 	}
-	return (a);
 }
