@@ -44,7 +44,7 @@ char	*ft_itoa(int n)
 	if (n == 0)
 		return ((char *)"0");
 	if (n == -2147483648)
-		return ((char *)"-2147483648");
+		return (ft_strcpy(ft_strnew(12), "-2147483648"));
 	if (n < 0 && (n = -n))
 		neg = -1;
 	while (n > 0)

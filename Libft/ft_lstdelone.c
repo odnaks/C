@@ -1,39 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: drestles <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/21 21:03:49 by drestles          #+#    #+#             */
-/*   Updated: 2018/11/23 17:35:13 by drestles         ###   ########.fr       */
+/*   Created: 2018/11/23 20:02:46 by drestles          #+#    #+#             */
+/*   Updated: 2018/11/23 20:26:10 by drestles         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *s)
+void	ft_lstdelone(t_list **alst, void (*del)(void*, size_t))
 {
-	int	flag;
-	int	n;
-	int	des;
-
-	n = 0;
-	des = 10;
-	while (*s == ' ' || *s == '\t' || *s == '\n' ||
-			*s == '\v' || *s == '\f' || *s == '\r')
-		s++;
-	flag = 1;
-	if (*s == '+' || *s == '-')
+	if (*alst)
 	{
-		if (*s == '-')
-			flag = -1;
-		s++;
+		del((*alst)->content, (*alst)->content_size);
+		ft_memdel((void**)alst);
 	}
-	while (*s >= '0' && *s <= '9')
-	{
-		n = n * 10 + (*s - '0');
-		s++;
-	}
-	return (n * flag);
 }

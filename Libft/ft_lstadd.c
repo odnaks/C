@@ -1,39 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: drestles <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/21 21:03:49 by drestles          #+#    #+#             */
-/*   Updated: 2018/11/23 17:35:13 by drestles         ###   ########.fr       */
+/*   Created: 2018/11/23 23:29:55 by drestles          #+#    #+#             */
+/*   Updated: 2018/11/23 23:42:56 by drestles         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *s)
+void	ft_lstadd(t_list **alst, t_list *new)
 {
-	int	flag;
-	int	n;
-	int	des;
-
-	n = 0;
-	des = 10;
-	while (*s == ' ' || *s == '\t' || *s == '\n' ||
-			*s == '\v' || *s == '\f' || *s == '\r')
-		s++;
-	flag = 1;
-	if (*s == '+' || *s == '-')
-	{
-		if (*s == '-')
-			flag = -1;
-		s++;
-	}
-	while (*s >= '0' && *s <= '9')
-	{
-		n = n * 10 + (*s - '0');
-		s++;
-	}
-	return (n * flag);
+	new->next = *alst;
+	*alst = new;
 }
