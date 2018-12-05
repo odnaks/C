@@ -6,12 +6,14 @@
 /*   By: gkoch <gkoch@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/20 02:55:37 by gkoch             #+#    #+#             */
-/*   Updated: 2018/11/25 21:43:30 by gkoch            ###   ########.fr       */
+/*   Updated: 2018/12/05 03:12:00 by gkoch            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+# define BUFF_SIZE 21
 
 # include <unistd.h>
 # include <stdlib.h>
@@ -87,5 +89,7 @@ void				ft_putlist(t_list	*lst);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstcpy(t_list *list);
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+int					get_next_line(const int fd, char **line);
+void    			ft_replace_char(char **str, char c, char rc);
 
 #endif

@@ -20,7 +20,8 @@ SOURCES		= ft_putchar.c ft_putstr.c ft_strcmp.c \
 			ft_addstr.c ft_lstnew.c ft_lstdelone.c \
 			ft_memlistdel.c ft_lstadd.c ft_putlist.c \
 			ft_lstiter.c	ft_lstdel.c ft_putlist.c \
-			ft_lstcpy.c ft_lstmap.c
+			ft_lstcpy.c ft_lstmap.c get_next_line.c \
+			ft_replace_char.c
 OBJECTS		= ft_putchar.o ft_putstr.o ft_strcmp.o \
 			ft_strlen.o ft_swap.o ft_memset.o \
 			ft_bzero.o ft_memcpy.o ft_memccpy.o \
@@ -42,7 +43,8 @@ OBJECTS		= ft_putchar.o ft_putstr.o ft_strcmp.o \
 			ft_addstr.o ft_lstnew.o ft_lstdelone.o \
 			ft_memlistdel.o ft_lstadd.o ft_putlist.o \
 			ft_lstiter.o ft_lstdel.o ft_putlist.o \
-			ft_lstcpy.o ft_lstmap.o
+			ft_lstcpy.o ft_lstmap.o get_next_line.o \
+			ft_replace_char.o
 FLAGS		= -c -Wall -Werror -Wextra
 
 all: $(NAME)
