@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   workmat.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gkoch <gkoch@student.42.fr>                +#+  +:+       +#+        */
+/*   By: drestles <drestles@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/04 15:40:19 by gkoch             #+#    #+#             */
-/*   Updated: 2018/12/05 03:50:56 by gkoch            ###   ########.fr       */
+/*   Updated: 2018/12/05 14:17:33 by drestles         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int			sizesquare(int n)
 	int		answer;
 
 	answer = 2;
-	while((answer * answer) < n)
+	while ((answer * answer) < n)
 		answer++;
 	return (answer);
 }

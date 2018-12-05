@@ -6,7 +6,7 @@
 /*   By: drestles <drestles@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/04 15:38:46 by gkoch             #+#    #+#             */
-/*   Updated: 2018/12/04 16:40:59 by drestles         ###   ########.fr       */
+/*   Updated: 2018/12/05 14:18:28 by drestles         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ static void		delpiece(char **map, char **matrix, int x, int y)
 	}
 }
 
-int		brut(char **map, t_tetris *tetris, int n)
+int				brut(char **map, t_tetris *tetris, int n)
 {
 	int	y;
 	int	x;
