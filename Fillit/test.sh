@@ -1,1 +1,0 @@
-clear && make re && ./fillit test2
