@@ -6,11 +6,11 @@
 #    By: drestles <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/09/09 14:23:11 by drestles          #+#    #+#              #
-#    Updated: 2018/09/09 14:24:35 by drestles         ###   ########.fr        #
+#    Updated: 2019/02/17 18:54:06 by drestles         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = eval_expr
+NAME = calc
 
 SRC += main.c
 SRC += default.c
